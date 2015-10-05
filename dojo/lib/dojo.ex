@@ -1,0 +1,2 @@
+defmodule Dojo do
+end
