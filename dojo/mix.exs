@@ -7,7 +7,8 @@ defmodule Dojo.Mixfile do
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps,
+     escript: dojoMain]
   end
 
   # Configuration for the OTP application
@@ -28,5 +29,9 @@ defmodule Dojo.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     []
+  end
+
+  defp dojoMain do
+    [main_module: Dojo]
   end
 end
