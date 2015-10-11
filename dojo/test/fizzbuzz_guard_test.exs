@@ -1,4 +1,4 @@
-defmodule FizzBuzzTest do
+defmodule FizzBuzzGuardTest do
   use ExUnit.Case
   import FizzBuzzGuard
 
