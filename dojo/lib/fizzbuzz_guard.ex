@@ -1,4 +1,4 @@
-defmodule FizzBuzz do
+defmodule FizzBuzzGuard do
 
   def go(input) when rem(input, 3) == 0 and rem(input, 5) == 0 do
     "fizzbuzz"
