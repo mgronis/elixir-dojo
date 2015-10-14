@@ -2,6 +2,8 @@ defmodule FizzBuzzCase do
 
   def go(input) do
     case divisible_by(input, 3, 5) do
+      {0, 0} ->
+        "fizzbuzz"
       {0, _} ->
         "fizz"
       {_, 0} ->
