@@ -6,4 +6,8 @@ defmodule FizzBuzzIfTest do
     assert go(1) == 1
   end
 
+  test "input is 2 should return 2" do
+    assert go(2) == 2
+  end
+
 end
