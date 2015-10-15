@@ -26,4 +26,8 @@ defmodule FizzBuzzIfTest do
     assert go(6) == "fizz"
   end
 
+  test "input is 7 should return 7" do
+    assert go(7) == 7
+  end
+
 end
