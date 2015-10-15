@@ -10,4 +10,8 @@ defmodule FizzBuzzIfTest do
     assert go(2) == 2
   end
 
+  test "input is 3 should return fizz" do
+    assert go(3) == "fizz"
+  end
+
 end
