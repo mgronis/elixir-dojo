@@ -14,4 +14,16 @@ defmodule FizzBuzzIfTest do
     assert go(3) == "fizz"
   end
 
+  test "input is 4 should return 4" do
+    assert go(4) == 4
+  end
+
+  test "input is 5 should return buzz" do
+    assert go(5) == "buzz"
+  end
+
+  test "input is 6 should return fizz" do
+    assert go(6) == "fizz"
+  end
+
 end
