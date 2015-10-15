@@ -1,7 +1,7 @@
 defmodule FizzBuzzIf do
 
   def go(input) do
-    if input == 3 or input == 6 do
+    if rem(input, 3) == 0 do
       "fizz"
     else
       if input == 5 do
