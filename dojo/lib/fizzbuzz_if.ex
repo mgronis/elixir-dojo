@@ -4,7 +4,7 @@ defmodule FizzBuzzIf do
     if rem(input, 3) == 0 do
       "fizz"
     else
-      if input == 5 do
+      if rem(input, 5) == 0 do
         "buzz"
       else
         input
