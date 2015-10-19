@@ -15,6 +15,14 @@ defmodule Romannumeral do
   defp convert(4) do
     "IV"
   end
+  
+  defp convert(9) do
+    "IX"
+  end
+
+  defp convert(input) when input >= 5 do
+    "V" <> convert(input - 5)
+  end
 
   defp convert(input) do
     "I" <> convert(input - 1)

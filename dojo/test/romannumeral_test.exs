@@ -21,9 +21,25 @@ defmodule RomannumeralTest do
   test "input is 4 should return IV" do
     assert doConvert(4) == "IV"
   end
-  # 
-  # test "input is 5 should return V" do
-  #   assert doConvert(5) == "V"
-  # end
+
+  test "input is 5 should return V" do
+    assert doConvert(5) == "V"
+  end
+
+  test "input is 6 should return VI" do
+    assert doConvert(6) == "VI"
+  end
+
+  test "input is 7 should return VII" do
+    assert doConvert(7) == "VII"
+  end
+
+  test "input is 8 should return VIII" do
+    assert doConvert(8) == "VIII"
+  end
+
+  test "input is 9 should return IX" do
+    assert doConvert(9) == "IX"
+  end
 
 end
