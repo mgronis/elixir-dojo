@@ -9,7 +9,7 @@ defmodule RomannumeralAcc do
   end
 
   defp convert(0, acc) do
-    Enum.reverse(acc) |> to_string
+    Enum.reverse(acc) |> List.to_string
   end
 
   defp convert(4, acc), do: convert(0, ["IV"|acc])
