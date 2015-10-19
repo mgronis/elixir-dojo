@@ -12,6 +12,8 @@ defmodule RomannumeralAcc do
     List.to_string(acc)
   end
 
+  defp convert(4, acc), do: convert(0, ["IV"|acc])
+
   defp convert(input, acc) do
     convert(input-1, ["I"|acc])
   end

@@ -14,4 +14,12 @@ defmodule RomannumeralAccTest do
     assert doConvert(2) == "II"
   end
 
+  test "input 3 should return III" do
+    assert doConvert(3) == "III"
+  end
+
+  test "input 4 should return IV" do
+    assert doConvert(4) == "IV"
+  end
+
 end
