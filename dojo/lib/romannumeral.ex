@@ -4,29 +4,13 @@ defmodule Romannumeral do
     convert(input)
   end
 
-  def doConvert(input) do
-    raise "input is not a number"
-  end
+  def doConvert(input), do: raise "input is not a number"
 
-  defp convert(0) do
-    ""
-  end
-
-  defp convert(4) do
-    "IV"
-  end
-
-  defp convert(9) do
-    "IX"
-  end
-
-  defp convert(40) do
-    "XL"
-  end
-
-  defp convert(90) do
-    "XC"
-  end
+  defp convert(0), do: ""
+  defp convert(4), do: "IV"
+  defp convert(9), do: "IX"
+  defp convert(40), do: "XL"
+  defp convert(90), do: "XC"
 
   defp convert(input) when input >= 91 do
     "XC" <> convert(input - 90)
