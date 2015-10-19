@@ -7,7 +7,7 @@ defmodule RomannumeralAccTest do
   end
 
   test "input 1 should return I" do
-    assert doConvert(1) == "I"
+    assert doConvert(1) == ["I"]
   end
 
 end
