@@ -118,4 +118,12 @@ defmodule RomannumeralTest do
     assert doConvert(90) == "XC"
   end
 
+  test "input is 91 should return XCI" do
+    assert doConvert(91) == "XCI"
+  end
+
+  test "input is 99 should return XCIX" do
+    assert doConvert(99) == "XCIX"
+  end
+
 end
