@@ -5,11 +5,15 @@ defmodule Romannumeral do
   end
 
   def doConvert(input) do
-    raise "input is not a number" 
+    raise "input is not a number"
   end
 
   defp convert(0) do
     ""
+  end
+
+  defp convert(4) do
+    "IV"
   end
 
   defp convert(input) do
