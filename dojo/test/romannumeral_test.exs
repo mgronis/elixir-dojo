@@ -42,4 +42,48 @@ defmodule RomannumeralTest do
     assert doConvert(9) == "IX"
   end
 
+  test "input is 10 should return X" do
+    assert doConvert(10) == "X"
+  end
+
+  test "input is 11 should return XI" do
+    assert doConvert(11) == "XI"
+  end
+
+  test "input is 12 should return XII" do
+    assert doConvert(12) == "XII"
+  end
+
+  test "input is 13 should return XIII" do
+    assert doConvert(13) == "XIII"
+  end
+
+  test "input is 14 should return XIV" do
+    assert doConvert(14) == "XIV"
+  end
+
+  test "input is 15 should return XV" do
+    assert doConvert(15) == "XV"
+  end
+
+  test "input is 16 should return XVI" do
+    assert doConvert(16) == "XVI"
+  end
+
+  test "input is 19 should return XIX" do
+    assert doConvert(19) == "XIX"
+  end
+
+  test "input is 20 should return XX" do
+    assert doConvert(20) == "XX"
+  end
+
+  test "input is 39 should return XXXIX" do
+    assert doConvert(39) == "XXXIX"
+  end
+
+  test "input is 40 should return XL" do
+    assert doConvert(40) == "XL"
+  end
+
 end
