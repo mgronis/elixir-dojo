@@ -24,6 +24,10 @@ defmodule Romannumeral do
     "XL"
   end
 
+  defp convert(90) do
+    "XC"
+  end
+
   defp convert(input) when input >= 50 do
     "L" <> convert(input - 50)
   end
