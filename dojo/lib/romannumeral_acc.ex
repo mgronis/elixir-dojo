@@ -9,7 +9,7 @@ defmodule RomannumeralAcc do
   end
 
   defp convert(0, acc) do
-    acc
+    List.to_string(acc)
   end
 
   defp convert(input, acc) do
