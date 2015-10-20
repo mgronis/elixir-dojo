@@ -30,4 +30,16 @@ defmodule RomannumeralAccTest do
     assert doConvert(6) == "VI"
   end
 
+  test "input 9 should return IX" do
+    assert doConvert(9) == "IX"
+  end
+
+  test "input 10 should return X" do
+    assert doConvert(10) == "X"
+  end
+
+  test "input 11 should return XI" do
+    assert doConvert(11) == "XI"
+  end
+
 end
