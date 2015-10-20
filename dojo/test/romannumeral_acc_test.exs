@@ -42,4 +42,19 @@ defmodule RomannumeralAccTest do
     assert doConvert(11) == "XI"
   end
 
+  test "input 39 should return XXXIX" do
+    assert doConvert(39) == "XXXIX"
+  end
+
+  test "input 40 should return XL" do
+    assert doConvert(40) == "XL"
+  end
+
+  test "input 41 should return XLI" do
+    assert doConvert(41) == "XLI"
+  end
+  test "input 50 should return L" do
+    assert doConvert(50) == "L"
+  end
+
 end
