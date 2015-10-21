@@ -15,6 +15,10 @@ defmodule RomannumeralAcc do
   defp convert(4, acc), do: convert(0, ["IV"|acc])
   defp convert(9, acc), do: convert(0, ["IX"|acc])
 
+  defp convert(input, acc) when input >=100 do
+    convert(input-100, ["C"|acc])
+  end
+
   defp convert(input, acc) when input >=90 do
     convert(input-90, ["XC"|acc])
   end
