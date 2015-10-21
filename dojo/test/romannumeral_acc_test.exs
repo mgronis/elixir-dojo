@@ -94,4 +94,8 @@ defmodule RomannumeralAccTest do
     assert doConvert(465) == "CDLXV"
   end
 
+  test "input 500 should return D" do
+    assert doConvert(500) == "D"
+  end
+
 end
