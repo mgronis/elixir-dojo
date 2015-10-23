@@ -1,13 +1,13 @@
 defmodule RomannumeralLess do
 
   def doConvert(input) when is_number input do
-    convert(input)
+    convert(input, {1, "I"})
   end
 
   def doConvert(input), do: raise "input is not a number"
 
-  defp convert(0), do: ""
-  defp convert(4), do: "IV"
+  defp convert(0, _), do: ""
+  defp convert(4, _), do: "IV"
   # defp convert(9), do: "IX"
   # defp convert(40), do: "XL"
   # defp convert(90), do: "XC"
@@ -28,12 +28,16 @@ defmodule RomannumeralLess do
   #   "X" <> convert(input - 10)
   # end
 
-  defp convert(input) when input >= 5 do
-    "V" <> convert(input - 5)
+  defp convert(input, prefixes) when input >= 5 do
+    "V" <> convert(input - 5, prefixes)
   end
 
-  defp convert(input) do
-    "I" <> convert(input - 1)
+  defp convert(input, {prefix, roman}) when input >= prefix do
+    "I" <> convert(input - 1, {prefix, roman})
   end
+
+  # defp convert(input, [{_,_}|tail]) do
+  #   convert(input, tail)
+  # end
 
 end
