@@ -1,9 +1,9 @@
 defmodule RomannumeralLess do
 
-  @prefixes [{1, "I"}]
+  @prefixes {1, "I"}
 
   def doConvert(input) when is_number input do
-    convert(input, {1, "I"})
+    convert(input, @prefixes)
   end
 
   def doConvert(input), do: raise "input is not a number"
@@ -35,7 +35,7 @@ defmodule RomannumeralLess do
   end
 
   defp convert(input, {prefix, roman}) when input >= prefix do
-    "I" <> convert(input - prefix, {prefix, roman})
+    roman <> convert(input - prefix, {prefix, roman})
   end
 
   # defp convert(input, [{_,_}|tail]) do
