@@ -34,8 +34,8 @@ defmodule RomannumeralLess do
     "V" <> convert(input - 5, prefixes)
   end
 
-  defp convert(input, {prefix, roman}) when input >= prefix do
-    roman <> convert(input - prefix, {prefix, roman})
+  defp convert(input, prefixes = {prefix, roman}) when input >= prefix do
+    roman <> convert(input - prefix, prefixes)
   end
 
   # defp convert(input, [{_,_}|tail]) do
