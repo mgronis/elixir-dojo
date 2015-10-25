@@ -10,8 +10,8 @@ defmodule RomannumeralLess do
 
   defp convert(0, _, acc), do: acc
 
-  defp convert(input, prefixes = [{prefix, roman} | tail], acc) when input >= prefix do
-    convert(input - prefix, prefixes, acc <> roman)
+  defp convert(input, prefixes = [{arabic, roman} | tail], acc) when input >= prefix do
+    convert(input - arabic, prefixes, acc <> roman)
   end
 
   defp convert(input, [head | tail], acc) do
