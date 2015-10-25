@@ -1,6 +1,6 @@
 defmodule RomannumeralLess do
 
-  @prefixes [[4, "IV"], [1, "I"]]
+  @prefixes [[5, "V"], [4, "IV"], [1, "I"]]
 
   def doConvert(input) when is_number input do
     convert(input, @prefixes, "")
@@ -29,10 +29,6 @@ defmodule RomannumeralLess do
   # defp convert(input) when input >= 10 do
   #   "X" <> convert(input - 10)
   # end
-
-  defp convert(input, prefixes, acc) when input >= 5 do
-    convert(input - 5, prefixes, acc <> "V")
-  end
 
   defp convert(input, prefixes = [[prefix, roman]|tail], acc) when input >= prefix do
     convert(input - prefix, prefixes, acc <> roman)
