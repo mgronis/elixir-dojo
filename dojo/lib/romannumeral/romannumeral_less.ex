@@ -1,6 +1,6 @@
 defmodule RomannumeralLess do
 
-  @prefixes [{9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}]
+  @prefixes [{10, "X"}, {9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}]
 
   def doConvert(input) when is_number input do
     convert(input, @prefixes, "")
