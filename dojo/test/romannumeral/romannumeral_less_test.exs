@@ -38,10 +38,10 @@ defmodule RomannumeralLessTest do
     assert doConvert(8) == "VIII"
   end
 
-  # test "input is 9 should return IX" do
-  #   assert doConvert(9) == "IX"
-  # end
-  #
+  test "input is 9 should return IX" do
+    assert doConvert(9) == "IX"
+  end
+  
   # test "input is 10 should return X" do
   #   assert doConvert(10) == "X"
   # end
