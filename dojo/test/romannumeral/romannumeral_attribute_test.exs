@@ -98,22 +98,22 @@ defmodule RomannumeralLessTest do
     assert doConvert(45) == "XLV"
   end
 
-  # test "input is 49 should return XLIX" do
-  #   assert doConvert(49) == "XLIX"
-  # end
-  #
-  # test "input is 50 should return L" do
-  #   assert doConvert(50) == "L"
-  # end
-  #
-  # test "input is 51 should return LI" do
-  #   assert doConvert(51) == "LI"
-  # end
-  #
-  # test "input is 89 should return LXXXIX" do
-  #   assert doConvert(89) == "LXXXIX"
-  # end
-  #
+  test "input is 49 should return XLIX" do
+    assert doConvert(49) == "XLIX"
+  end
+
+  test "input is 50 should return L" do
+    assert doConvert(50) == "L"
+  end
+
+  test "input is 51 should return LI" do
+    assert doConvert(51) == "LI"
+  end
+
+  test "input is 89 should return LXXXIX" do
+    assert doConvert(89) == "LXXXIX"
+  end
+  
   # test "input is 90 should return XC" do
   #   assert doConvert(90) == "XC"
   # end
