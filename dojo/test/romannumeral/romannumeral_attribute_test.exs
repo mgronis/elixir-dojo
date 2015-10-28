@@ -113,17 +113,17 @@ defmodule RomannumeralLessTest do
   test "input is 89 should return LXXXIX" do
     assert doConvert(89) == "LXXXIX"
   end
-  
-  # test "input is 90 should return XC" do
-  #   assert doConvert(90) == "XC"
-  # end
-  #
-  # test "input is 91 should return XCI" do
-  #   assert doConvert(91) == "XCI"
-  # end
-  #
-  # test "input is 99 should return XCIX" do
-  #   assert doConvert(99) == "XCIX"
-  # end
+
+  test "input is 90 should return XC" do
+    assert doConvert(90) == "XC"
+  end
+
+  test "input is 91 should return XCI" do
+    assert doConvert(91) == "XCI"
+  end
+
+  test "input is 99 should return XCIX" do
+    assert doConvert(99) == "XCIX"
+  end
 
 end
