@@ -70,7 +70,7 @@ defmodule RomannumeralAccTest do
     assert doConvert(90) == "XC"
   end
 
-  test "input 90 should return XC" do
+  test "input 99 should return XC" do
     assert doConvert(99) == "XCIX"
   end
 
