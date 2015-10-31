@@ -13,7 +13,7 @@ defmodule Bowling do
     end
   end
 
-  defp extractResult({peek1, peek2, acc}) do
+  defp extractResult({_, _, acc}) do
     acc
   end
 
