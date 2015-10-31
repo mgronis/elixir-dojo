@@ -1,16 +1,20 @@
 defmodule Bowling do
 
   def calculate(frames) do
-    # Enum.reduce(frames, 0, fn({a, b}, acc) -> (a + b + acc) end)
-    Enum.reduce(frames, 0, &addScore(&1, &2))
+    acc = Enum.reverse(frames) |> Enum.reduce {0, 0, 0}, &addScore(&1, &2)
+    extractResult(acc)
   end
 
-  defp addScore(frame, acc) do
+  defp addScore(frame, {peek1, peek2, acc}) do
     case frame do
-      {a, b} -> a + b + acc
-      {a, b, c} -> a + b + c + acc
+      {a, b} -> {a+b, peek1, a + b + acc}
+      {a, b, c} -> {a+b+c, peek2, a + b + c + acc}
       _ -> raise "Holy moly!! Your are cheating, that is not a bowling score...."
     end
+  end
+
+  defp extractResult({peek1, peek2, acc}) do
+    acc
   end
 
 end
