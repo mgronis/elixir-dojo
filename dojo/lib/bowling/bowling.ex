@@ -8,7 +8,7 @@ defmodule Bowling do
   defp addScore(frame, {peek1, peek2, acc}) do
     case frame do
       {a, b} -> {a+b, peek1, a + b + acc}
-      {a, b, c} -> {a+b+c, peek2, a + b + c + acc}
+      {a, b, c} -> {a+b+c, peek1, a + b + c + acc}
       _ -> raise "Holy moly!! Your are cheating, that is not a bowling score...."
     end
   end
