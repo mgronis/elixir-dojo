@@ -6,8 +6,12 @@ defmodule BowlingTest do
      assert calculate([{1,1}, {2,4}]) == 8
   end
 
-  test "calculate two frames of which last is three rolls no strike/spare" do
-     assert calculate([{1,1}, {2,4,3}]) == 11
+  # test "calculate two frames of which last is three rolls no strike/spare" do
+  #    assert calculate([{1,1}, {2,4,3}]) == 11
+  # end
+
+  test "calculate two frames one spare and on non strike/spare" do
+    assert calculate([{5, '/'}, {3, 4}]) == 20
   end
 
 end
