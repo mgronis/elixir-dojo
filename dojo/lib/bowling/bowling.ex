@@ -20,6 +20,8 @@ defmodule Bowling do
   defp strikeScore({a, '/'}, _, acc) do; 20 + acc end
   defp strikeScore({a, b}, _, acc) do; 10 + a + b + acc end
 
+  defp spareScore({'x', _}, acc) do; 20 + acc end
+  defp spareScore({a, '/'}, acc) do; 10 + a + acc end
   defp spareScore({a,b}, acc) do; 10 + a + acc end
 
   defp extractResult({_, _, acc}) do; acc end
