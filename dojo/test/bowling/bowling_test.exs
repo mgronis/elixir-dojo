@@ -30,7 +30,7 @@ defmodule BowlingTest do
     assert calculate([{'x', '-'}, {'x', '-'}, {3, 4}]) == 47
   end
 
-  test "calculate two frames one spare and no strike" do
+  test "calculate two frames one spare and one strike" do
     assert calculate([{5, '/'}, {'x', '-'}]) == 30
   end
 
