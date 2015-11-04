@@ -5,7 +5,7 @@ defmodule Bowling do
     extractResult(acc)
   end
 
-  defp addScore(frame, {peek1={p11, p12}, peek2={p21, p22}, acc}) do
+  defp addScore(frame, {peek1, peek2, acc}) do
     case frame do
       {'x', '-'} -> {{'x', '-'}, peek1, strikeScore(peek1, peek2, acc)}
       {a, '/'} -> {{a, '/'}, peek1, spareScore(peek1, acc)}
