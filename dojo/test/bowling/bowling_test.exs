@@ -54,4 +54,8 @@ defmodule BowlingTest do
     assert calculate([{'-', '/'}, {'-', 2}]) == 12
   end
 
+  test "calculate two frames double spare with first roll in the gutter" do
+    assert calculate([{'-', '/'}, {'-', '/'}]) == 20
+  end
+
 end
