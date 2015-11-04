@@ -2,8 +2,20 @@ defmodule BowlingTest do
   use ExUnit.Case
   import Bowling
 
-  test "calculate two frames with only gutter throws" do
+  test "calculate two frames with only gutter rolls" do
     assert calculate([{'-', '-'}, {'-', '-'}]) == 0
+  end
+
+  test "calculate two frames with second rolls in the gutter" do
+    assert calculate([{1, '-'}, {1, '-'}]) == 2
+  end
+
+  test "calculate two frames with first rolls in the gutter" do
+    assert calculate([{'-', 1}, {'-', 1}]) == 2
+  end
+
+  test "calculate two frames with combination of first and second rolls in the gutter" do
+    assert calculate([{'-', 1}, {1, '-'}]) == 2
   end
 
   test "calculate two frames no strike/spare" do
