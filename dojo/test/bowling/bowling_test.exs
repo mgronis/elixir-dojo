@@ -70,4 +70,11 @@ defmodule BowlingTest do
      assert calculate([{1, 3}, {7, '/', 'x'}]) == 24
   end
 
+# Things to do
+  # x,x,-
+  # x,x,c
+  # -,/,a
+  # -,/,.
+  # -,/,x
+
 end
