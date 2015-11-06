@@ -13,7 +13,10 @@ defmodule Bowling do
       {a, '-'} -> {{a, 0}, peek1, a + acc}
       {'-', b} -> {{0, b}, peek1, b + acc}
       {a, b} -> {{a, b}, peek1, a + b + acc}
-      # {a, b, c} -> {{a, b, c}, peek1, a + b + c + acc}
+      {'x', 'x', 'x'} -> {{'x', '-'}, {'x', '-'}, 30 + acc}
+      {'x', b, '/'} -> {{'x', '-'}, {b, '/'}, 20 + acc}
+      {a, '/', 'x'} -> {{a, '/'}, {'x', '-'}, 20 + acc}
+      {a, b, '-'} -> {{a, b}, peek1, a + b + acc}
       _ -> raise "Holy moly!! Your are cheating, that is not a bowling score...."
     end
   end

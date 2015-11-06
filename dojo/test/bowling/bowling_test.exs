@@ -22,10 +22,6 @@ defmodule BowlingTest do
      assert calculate([{1,1}, {2,4}]) == 8
   end
 
-  # test "calculate two frames of which last is three rolls no strike/spare" do
-  #    assert calculate([{1,1}, {2,4,3}]) == 11
-  # end
-
   test "calculate two frames one spare and no strike" do
     assert calculate([{5, '/'}, {3, 4}]) == 20
   end
@@ -56,6 +52,22 @@ defmodule BowlingTest do
 
   test "calculate two frames double spare with first roll in the gutter" do
     assert calculate([{'-', '/'}, {'-', '/'}]) == 20
+  end
+
+  test "calculate two frames of which last is three possible rolls no strike/spare" do
+     assert calculate([{1, 1}, {2, 4, '-'}]) == 8
+  end
+
+  test "calculate two frames of which last is three possible rolls three strikes" do
+     assert calculate([{1, 1}, {'x', 'x', 'x'}]) == 32
+  end
+
+  test "calculate two frames of which last is three possible rolls one strike and one spare" do
+     assert calculate([{1, 1}, {'x', 5, '/'}]) == 22
+  end
+
+  test "calculate two frames of which last is three possible rolls one strike and one spare" do
+     assert calculate([{1, 3}, {7, '/', 'x'}]) == 24
   end
 
 end
