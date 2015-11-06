@@ -71,6 +71,7 @@ defmodule BowlingTest do
   end
 
 # Things to do
+  # x,- -,/
   # x,x,-
   # x,x,c
   # -,/,a
