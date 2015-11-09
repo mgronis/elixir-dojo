@@ -78,10 +78,16 @@ defmodule BowlingTest do
      assert calculate([{1, 3}, {'-', '/', '-'}]) == 14
   end
 
-# Things to do
-  # x,- -,/
-  # x,x,-
-  # x,x,c
-  # -,/,a
+  test "calculate two frames of which last is three possible rolls one spare followd by regular roll" do
+     assert calculate([{1, 3}, {'-', '/', 5}]) == 19
+  end
+
+  test "calculate two frames of which last is three possible rolls two strikes followd by gutter roll" do
+     assert calculate([{1, 3}, {'x', 'x', '-'}]) == 24
+  end
+
+  test "calculate two frames of which last is three possible rolls two strikes followd by regular roll" do
+     assert calculate([{1, 3}, {'x', 'x', 6}]) == 30
+  end
 
 end
