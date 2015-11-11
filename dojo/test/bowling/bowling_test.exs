@@ -1,6 +1,6 @@
-defmodule BowlingCaseTest do
+defmodule BowlingTest do
   use ExUnit.Case
-  import BowlingCase
+  import Bowling
 
   test "calculate two frames with only gutter rolls" do
     assert calculate([{'-', '-'}, {'-', '-'}]) == 0

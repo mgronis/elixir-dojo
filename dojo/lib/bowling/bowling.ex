@@ -1,4 +1,4 @@
-defmodule BowlingCase do
+defmodule Bowling do
 
   def calculate(frames) do
     acc = Enum.reverse(frames) |> Enum.reduce {{0, 0}, {0, 0}, 0}, &addScore(&1, &2)
