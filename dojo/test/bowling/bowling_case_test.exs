@@ -90,4 +90,8 @@ defmodule BowlingTest do
      assert calculate([{1, 3}, {'x', 'x', 6}]) == 30
   end
 
+  test "entire series of only strikes" do
+     assert calculate([{'x', '-'}, {'x', '-'}, {'x', '-'}, {'x', '-'}, {'x', '-'}, {'x', '-'}, {'x', '-'}, {'x', '-'}, {'x', '-'}, {'x', 'x', 'x'}]) == 300
+  end
+
 end
