@@ -6,19 +6,15 @@ defmodule Bowling do
   end
 
   defp addScore({'x', '-'}=frame, {peek1, peek2, acc}) do; {frame, peek1, strikeScore(peek1, peek2, acc)} end
-  defp addScore({_, _}=frame, {peek1, peek2, acc}) do
-    case frame do
-      {a, '/'} -> {{a, '/'}, peek1, spareScore(peek1, acc)}
-      {'-', '-'} -> {{0, 0}, peek1, acc}
-      {a, '-'} -> {{a, 0}, peek1, a + acc}
-      {'-', b} -> {{0, b}, peek1, b + acc}
-      {a, b} -> {{a, b}, peek1, a + b + acc}
-    end
-  end
+  defp addScore({a, '/'}=frame, {peek1, peek2, acc}) do; {frame, peek1, spareScore(peek1, acc)} end
+  defp addScore({'-', '-'}, {peek1, peek2, acc}) do; {{0, 0}, peek1, acc} end
+  defp addScore({a, '-'}, {peek1, peek2, acc}) do; {{a, 0}, peek1, a + acc} end
+  defp addScore({'-', b}, {peek1, peek2, acc}) do; {{0, b}, peek1, b + acc} end
+  defp addScore({a, b}=frame, {peek1, peek2, acc}) do; {frame, peek1, a + b + acc} end
 
+  defp addScore({'x', 'x', 'x'}, {peek1, peek2, acc}) do; {{'x', '-'}, {'x', '-'}, 30 + acc} end
   defp addScore({_, _, _}=frame, {peek1, peek2, acc}) do
     case frame do
-      {'x', 'x', 'x'} -> {{'x', '-'}, {'x', '-'}, 30 + acc}
       {'x', 'x', '-'} -> {{'x', '-'}, {'x', '-'}, 20 + acc}
       {'x', 'x', c} -> {{'x', '-'}, {'x', '-'}, 20 + c + acc}
       {'x', b, '/'} -> {{'x', '-'}, {b, '/'}, 20 + acc}
