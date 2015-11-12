@@ -66,7 +66,7 @@ defmodule BowlingTest do
      assert calculate([{1, 1}, {'x', 5, '/'}]) == 22
   end
 
-  test "calculate two frames of which last is three possible rolls one strike and one spare" do
+  test "calculate two frames of which last is three possible rolls one spare and one strike" do
      assert calculate([{1, 3}, {7, '/', 'x'}]) == 24
   end
 
