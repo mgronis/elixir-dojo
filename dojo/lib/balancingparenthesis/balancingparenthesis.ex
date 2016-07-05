@@ -21,7 +21,7 @@ defmodule BalancingParenthesis do
       balance(h, tail, acc - 1)
     end
 
-    defp balance("(", [], acc) do
+    defp balance("(", [], _acc) do
       false
     end
 
