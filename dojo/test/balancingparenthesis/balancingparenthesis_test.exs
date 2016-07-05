@@ -30,6 +30,8 @@ defmodule BalancingParenthesisTest do
     assert balance("(())") == true
   end
 
-
+  test "incorrect input" do
+    assert balance("a") == false
+  end
 
 end

@@ -29,4 +29,8 @@ defmodule BalancingParenthesis do
       acc == 1
     end
 
+    defp balance(_, _, _) do
+      false
+    end
+
 end
