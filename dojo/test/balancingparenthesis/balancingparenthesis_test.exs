@@ -34,4 +34,16 @@ defmodule BalancingParenthesisTest do
     assert balance("a") == false
   end
 
+  test "extra closing on the end" do
+    assert balance("())") == false
+  end
+
+  test "extra opening on the end" do
+    assert balance("()(") == false
+  end
+
+  test "multiple extra closing on the end" do
+    assert balance("()))") == false
+  end
+
 end
