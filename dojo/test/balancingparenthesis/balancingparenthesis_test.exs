@@ -22,4 +22,14 @@ defmodule BalancingParenthesisTest do
     assert balance("()()") == true
   end
 
+  test "inverted pair of parenthesis" do
+    assert balance(")(") == false
+  end
+
+  test "nested pairs of parenthesis" do
+    assert balance("(())") == true
+  end
+
+
+
 end
